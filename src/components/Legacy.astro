@@ -1,0 +1,279 @@
+---
+import { useTranslations } from '../i18n/utils';
+import { bandHref } from '../data/bands';
+
+const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
+const t = useTranslations(lang);
+---
+<section class="legacy" id="credits">
+  <!-- The Last Vegas — featured -->
+  <article class="featured" id="the-last-vegas">
+    <div class="content-col">
+      <div class="featured-label">★ {t('legacy.featured')}</div>
+      <h3 class="featured-name">
+        <a href={bandHref('the-last-vegas', lang)}>THE LAST VEGAS</a>
+      </h3>
+      <div class="era">{t('legacy.lastVegas.era')}</div>
+      <p class="desc">{t('legacy.lastVegas.description')}</p>
+      <div class="tags">
+        <span class="tag">Studio Albums</span>
+        <span class="tag">World Tours</span>
+        <span class="tag">AC/DC · Mötley Crüe · ZZ Top</span>
+      </div>
+      <a href={bandHref('the-last-vegas', lang)} class="cell-link">{t('band.view')} →</a>
+    </div>
+
+    <div class="photo-col">
+      <div class="photo-main">
+        <img src="/images/last-vegas.jpg" alt="The Last Vegas" loading="lazy" />
+      </div>
+      <div class="photo-secondary">
+        <img src="/images/backstage-uk.jpg" alt="The Last Vegas backstage" loading="lazy" />
+      </div>
+    </div>
+  </article>
+
+  <!-- 3-card grid -->
+  <div class="grid">
+    <article class="cell" id="urge-overkill">
+      <h3 class="cell-name">
+        <a href={bandHref('urge-overkill', lang)}>URGE OVERKILL</a>
+      </h3>
+      <div class="cell-photo">
+        <img src="/images/urge-overkill.jpg" alt="Urge Overkill" loading="lazy" />
+      </div>
+      <div class="cell-era">{t('legacy.urgeOverkill.era')}</div>
+      <p class="cell-desc">{t('legacy.urgeOverkill.description')}</p>
+      <a href={bandHref('urge-overkill', lang)} class="cell-link">{t('band.view')} →</a>
+    </article>
+
+    <article class="cell" id="the-cynics">
+      <h3 class="cell-name">
+        <a href={bandHref('the-cynics', lang)}>THE CYNICS</a>
+      </h3>
+      <div class="placeholder">[ The Cynics Photo ]</div>
+      <div class="cell-era">{t('legacy.cynics.era')}</div>
+      <p class="cell-desc">{t('legacy.cynics.description')}</p>
+      <a href={bandHref('the-cynics', lang)} class="cell-link">{t('band.view')} →</a>
+    </article>
+  </div>
+</section>
+
+<style>
+  .legacy {
+    border-bottom: 4px solid var(--text);
+  }
+
+  /* Featured (The Last Vegas) */
+  .featured {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 56px;
+    padding: 72px 64px 72px 80px;
+    border-bottom: 4px solid var(--text);
+    overflow: hidden;
+  }
+
+  .content-col {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .featured-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--neon);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .featured-name {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
+    margin: 0 0 18px 0;
+  }
+
+  .era {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+
+  .desc {
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 15px;
+    max-width: 520px;
+  }
+
+  .tags {
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: var(--text);
+    color: var(--bg);
+    padding: 6px 12px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .photo-col {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .photo-main img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border: 3px solid var(--neon);
+  }
+
+  .photo-secondary img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Card grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cell {
+    padding: 48px;
+    border-right: 2px solid var(--text);
+  }
+
+  .cell:last-child {
+    border-right: none;
+  }
+
+  .cell-name {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1;
+    margin: 0 0 18px 0;
+    letter-spacing: 0.02em;
+  }
+
+  .cell-photo {
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .cell-photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .cell-photo:hover img {
+    transform: scale(1.04);
+  }
+
+  .placeholder {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(145deg, #D4CFC5 0%, #C5BFB3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    border: 1px dashed #999;
+    margin-bottom: 16px;
+  }
+
+  .cell-era {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .cell-desc {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 13px;
+  }
+
+  .featured-name a,
+  .cell-name a {
+    transition: color 0.15s;
+  }
+
+  .featured-name a:hover,
+  .cell-name a:hover {
+    color: var(--accent);
+  }
+
+  .cell-link {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--text);
+  }
+
+  .cell-link:hover {
+    border-color: var(--text);
+  }
+
+  @media (max-width: 900px) {
+    .featured {
+      grid-template-columns: 1fr;
+      padding: 48px 32px 48px 40px;
+      gap: 32px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cell {
+      border-right: none;
+      border-bottom: 2px solid var(--text);
+      padding: 32px;
+    }
+
+    .cell:last-child {
+      border-bottom: none;
+    }
+  }
+</style>

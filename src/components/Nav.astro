@@ -1,0 +1,112 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
+const t = useTranslations(lang);
+const isDE = lang === 'de';
+
+// Locale-independent path, e.g. '/de/bands/the-drags' -> '/bands/the-drags'.
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const bare = (isDE ? path.replace(/^\/de/, '') : path) || '/';
+const isHome = bare === '/';
+
+const homeHref = isDE ? '/de/' : '/';
+// Section links are fragments on the homepage, absolute links from anywhere else.
+const section = (id: string) => (isHome ? `#${id}` : `${homeHref}#${id}`);
+// Keep the reader on the same page when switching language.
+const enHref = bare;
+const deHref = isHome ? '/de/' : `/de${bare}`;
+---
+<nav>
+  <a href={homeHref} class="logo">ADAM ARLING</a>
+
+  <div class="links">
+    <a href={section('music')}>{t('nav.music')}</a>
+    <a href={section('shows')}>{t('nav.shows')}</a>
+    <a href={section('about')}>{t('nav.about')}</a>
+    <a href={section('gallery')}>{t('nav.gallery')}</a>
+    <a href={section('contact')}>{t('nav.contact')}</a>
+  </div>
+
+  <div class="lang-switcher">
+    <a href={enHref} class:list={['lang', !isDE && 'active']}>EN</a>
+    <span class="sep">/</span>
+    <a href={deHref} class:list={['lang', isDE && 'active']}>DE</a>
+  </div>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 64px 22px 72px;
+    border-bottom: 2px solid var(--text);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+  }
+
+  .links {
+    display: flex;
+    gap: 28px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .links a {
+    color: var(--muted);
+    transition: color 0.15s;
+  }
+
+  .links a:hover {
+    color: var(--text);
+  }
+
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    flex-shrink: 0;
+  }
+
+  .lang {
+    color: var(--muted);
+    transition: color 0.15s;
+  }
+
+  .lang:hover,
+  .lang.active {
+    color: var(--accent);
+  }
+
+  .sep {
+    color: var(--line);
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 16px 24px 16px 32px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .links {
+      display: none;
+    }
+  }
+</style>

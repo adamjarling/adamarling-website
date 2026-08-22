@@ -1,0 +1,54 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #F0EBE3;
+  --text: #111;
+  --muted: #555;
+  --line: rgba(17, 17, 17, 0.12);
+  --accent: #6b945A;
+  --neon: #E76F51;
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'DM Sans', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keep anchor targets clear of the sticky nav (~68px tall). */
+[id] {
+  scroll-margin-top: 84px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

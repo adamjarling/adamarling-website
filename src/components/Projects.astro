@@ -1,0 +1,190 @@
+---
+import { useTranslations } from '../i18n/utils';
+import { bandHref } from '../data/bands';
+
+const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
+const t = useTranslations(lang);
+---
+<section class="projects" id="projects">
+  <!-- DeLoreans -->
+  <div class="cell cell-deloreans" id="deloreans">
+    <h3 class="band-name">
+      <a href={bandHref('deloreans', lang)}>DELOREANS</a>
+    </h3>
+    <div class="photo-wrap">
+      <img src="/images/deloreans-graffiti.jpg" alt="DeLoreans" />
+    </div>
+    <div class="genre">{t('deloreans.genre')}</div>
+    <p class="desc">{t('deloreans.description')}</p>
+    <div class="cell-links">
+      <a
+        href="https://deloreans.at"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link link-dark">{t('deloreans.website')}</a
+      >
+      <a href={bandHref('deloreans', lang)} class="link link-dark">{t('band.view')} →</a>
+    </div>
+  </div>
+
+  <!-- The Midnight Calls -->
+  <div class="cell cell-midnight" id="the-midnight-calls">
+    <h3 class="band-name">
+      <a href={bandHref('the-midnight-calls', lang)}>THE MIDNIGHT CALLS</a>
+    </h3>
+    <div class="photo-wrap">
+      <img src="/images/midnight-calls-banner.jpg" alt="The Midnight Calls performing live" />
+    </div>
+    <div class="genre">{t('midnight.genre')}</div>
+    <p class="desc">{t('midnight.description')}</p>
+    <div class="cell-links">
+      <a href={bandHref('the-midnight-calls', lang)} class="link link-dark"
+        >{t('band.view')} →</a
+      >
+    </div>
+  </div>
+
+  <!-- Warrior Soul -->
+  <div class="cell cell-warrior" id="warrior-soul">
+    <h3 class="band-name">
+      <a href={bandHref('warrior-soul', lang)}>WARRIOR SOUL</a>
+    </h3>
+    <div class="photo-wrap">
+      <img src="/images/warrior-soul-singer-guitar.jpg" alt="Warrior Soul performing live" />
+    </div>
+    <div class="genre">{t('warriorSoul.genre')}</div>
+    <p class="desc">{t('warriorSoul.description')}</p>
+    <div class="cell-links">
+      <a href={bandHref('warrior-soul', lang)} class="link link-dark">{t('band.view')} →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 4px solid var(--text);
+  }
+
+  .cell {
+    padding: 48px;
+  }
+
+  .cell-deloreans {
+    border-right: 4px solid var(--text);
+  }
+
+  .cell-midnight {
+    border-right: 4px solid var(--text);
+  }
+
+  .cell-warrior {
+    /* paper bg by default */
+  }
+
+  .band-name {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1;
+    margin: 0 0 22px 0;
+    letter-spacing: 0.02em;
+  }
+
+  .band-name a {
+    transition: color 0.15s;
+  }
+
+  .band-name a:hover {
+    color: var(--accent);
+  }
+
+  .cell-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .photo-wrap {
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .photo-wrap img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .photo-wrap:hover img {
+    transform: scale(1.04);
+  }
+
+  .placeholder {
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(145deg, #D4CFC5 0%, #C5BFB3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    border: 1px dashed #999;
+    margin-bottom: 20px;
+  }
+
+  .genre {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  .desc {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 13px;
+  }
+
+  .link {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding-bottom: 2px;
+    cursor: pointer;
+  }
+
+  .link-dark {
+    border-bottom: 2px solid var(--accent);
+    color: var(--text);
+  }
+
+  .link-dark:hover {
+    border-color: var(--text);
+  }
+
+  @media (max-width: 900px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+
+    .cell-deloreans,
+    .cell-midnight {
+      border-right: none;
+      border-bottom: 4px solid var(--text);
+    }
+
+    .cell {
+      padding: 40px 32px;
+    }
+  }
+</style>

@@ -1,0 +1,117 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
+const t = useTranslations(lang);
+
+const social = [
+  { label: 'Instagram', href: 'https://www.instagram.com/adamarling' },
+  { label: 'Spotify',   href: 'https://open.spotify.com/artist/3YH7l3x1bpAzYRIk9RFV9K' },
+  { label: 'Bandcamp',  href: 'https://thedragsband.bandcamp.com' },
+  { label: 'Facebook',  href: 'https://www.facebook.com/adamarling' },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/adamjarling/' },
+];
+---
+<footer>
+  <div class="inner">
+    <div class="col col-brand">
+      <div class="logo">ADAM ARLING</div>
+      <div class="copy">{t('footer.copy')}</div>
+      <div class="neon-bar"></div>
+    </div>
+
+    <div class="col">
+      <div class="col-label">{t('footer.follow')}</div>
+      {
+        social.map((s) => (
+          <a href={s.href} target="_blank" rel="noopener noreferrer" class="item">
+            {s.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="col">
+      <div class="col-label">{t('footer.more')}</div>
+      <a href="mailto:aarling@gmail.com" class="item">{t('footer.press')}</a>
+      <a href="https://www.linkedin.com/in/adamjarling/" target="_blank" rel="noopener noreferrer" class="item">{t('footer.work')}</a>
+      <a href="#" class="item">{t('footer.writing')}</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--text);
+    color: var(--bg);
+    padding: 48px 64px 48px 80px;
+  }
+
+  .inner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 32px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    color: var(--bg);
+  }
+
+  .copy {
+    font-size: 11px;
+    color: #666;
+  }
+
+  .neon-bar {
+    margin-top: 16px;
+    width: 40px;
+    height: 4px;
+    background: var(--neon);
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .col-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--neon);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .item {
+    color: #888;
+    transition: color 0.15s;
+    cursor: pointer;
+  }
+
+  .item:hover {
+    color: var(--bg);
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      padding: 40px 32px;
+    }
+
+    .inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .col-brand {
+      grid-column: span 2;
+    }
+  }
+</style>

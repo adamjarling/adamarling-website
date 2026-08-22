@@ -1,0 +1,164 @@
+---
+import { useTranslations } from '../i18n/utils';
+import { bandHref } from '../data/bands';
+
+const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
+const t = useTranslations(lang);
+---
+<section class="drags" id="music">
+  <div class="inner">
+    <div class="label">{t('drags.label')}</div>
+    <h2 class="title">THE DRAGS</h2>
+
+    <div class="content">
+      <div class="text-col">
+        <div class="genre">{t('drags.genre')}</div>
+        <p class="desc">{t('drags.description')}</p>
+        <div class="links">
+          <a
+            href="https://thedragsband.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link">{t('drags.website')}</a
+          >
+          <a
+            href="https://thedragsband.bandcamp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link">{t('drags.listen')}</a
+          >
+          <a href={bandHref('the-drags', lang)} class="link">{t('band.view')} →</a>
+        </div>
+      </div>
+
+      <div class="photo-col">
+        <div class="photo-main">
+          <img src="/images/drags-live-band.jpg" alt="The Drags performing live" />
+        </div>
+        <div class="photo-pair">
+          <div class="photo-sm">
+            <img src="/images/drags-live-singer.jpg" alt="The Drags vocalist on stage" />
+          </div>
+          <div class="photo-sm">
+            <img src="/images/drags-live-guitarist.jpg" alt="The Drags guitarist on stage" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .drags {
+    position: relative;
+    background: var(--text);
+    color: var(--bg);
+    padding: 72px 64px 72px 80px;
+    overflow: hidden;
+    border-bottom: 4px solid var(--text);
+  }
+
+  .inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--neon);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(56px, 7vw, 96px);
+    line-height: 0.9;
+    margin: 0 0 40px 0;
+    letter-spacing: 0.03em;
+    color: var(--bg);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .genre {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--neon);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.1em;
+  }
+
+  .desc {
+    color: #999;
+    line-height: 1.75;
+  }
+
+  .links {
+    margin-top: 28px;
+    display: flex;
+    gap: 24px;
+  }
+
+  .link {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    border-bottom: 2px solid var(--neon);
+    padding-bottom: 3px;
+    color: var(--bg);
+    transition: color 0.15s;
+  }
+
+  .link:hover {
+    color: var(--neon);
+  }
+
+  .photo-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .photo-main img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border: 3px solid var(--accent);
+  }
+
+  .photo-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .photo-sm img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    .drags {
+      padding: 48px 32px 48px 40px;
+    }
+
+    .content {
+      grid-template-columns: 1fr;
+    }
+
+  }
+</style>

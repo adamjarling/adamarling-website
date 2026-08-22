@@ -1,0 +1,104 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
+const t = useTranslations(lang);
+
+const photos = [
+  { src: '/images/portrait-staircase.jpg', alt: 'Adam Arling', span: 'tall' },
+  { src: '/images/midnight-calls-crowd.jpg', alt: 'The Midnight Calls with fans' },
+  { src: '/images/portrait-street.jpg',    alt: 'Adam Arling Vienna' },
+  { src: '/images/portrait-dark.jpg',      alt: 'Adam Arling Vienna interior' },
+  { src: '/images/vienna.jpg',             alt: 'Vienna' },
+  { src: '/images/marina-trio.jpg',        alt: 'Adam with guitar' },
+  { src: '/images/portrait-statue.jpg',    alt: 'Adam Arling Barcelona' },
+  { src: '/images/sea-terrace.jpg',        alt: 'Adam Arling with guitar by the sea' },
+];
+---
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <h2 class="title">{t('gallery.title')}</h2>
+    <div class="accent-line"></div>
+  </div>
+
+  <div class="grid">
+    {
+      photos.map((p) => (
+        <div class:list={['photo', p.span === 'tall' && 'span-2']}>
+          <img src={p.src} alt={p.alt} loading="lazy" />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .gallery {
+    border-bottom: 4px solid var(--text);
+  }
+
+  .gallery-header {
+    padding: 56px 64px 40px 80px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border-bottom: 2px solid var(--text);
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-size: clamp(40px, 5vw, 56px);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+
+  .accent-line {
+    flex: 1;
+    height: 4px;
+    background: var(--neon);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+    gap: 3px;
+  }
+
+  .photo {
+    overflow: hidden;
+    position: relative;
+    background: #d4cfc5;
+  }
+
+  .photo.span-2 {
+    grid-row: span 2;
+  }
+
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .photo:hover img {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .gallery-header {
+      padding: 40px 32px 32px 40px;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 220px;
+    }
+
+    .photo.span-2 {
+      grid-row: span 1;
+    }
+  }
+</style>

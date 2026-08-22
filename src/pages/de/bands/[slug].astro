@@ -1,0 +1,24 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Nav from '../../../components/Nav.astro';
+import BandPage from '../../../components/BandPage.astro';
+import Footer from '../../../components/Footer.astro';
+import { bands } from '../../../data/bands';
+import { useTranslations } from '../../../i18n/utils';
+
+export function getStaticPaths() {
+  return bands.map((band) => ({ params: { slug: band.slug }, props: { band } }));
+}
+
+const { band } = Astro.props;
+const t = useTranslations('de');
+---
+<Layout
+  title={`${band.name} — Adam Arling`}
+  description={t(band.blurbKey)}
+  lang="de"
+>
+  <Nav />
+  <BandPage band={band} lang="de" />
+  <Footer />
+</Layout>
