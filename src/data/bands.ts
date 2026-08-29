@@ -124,14 +124,16 @@ export const bands: Band[] = [
     note: { en: '' },
     links: [
       { label: 'Wikipedia', href: 'https://en.wikipedia.org/wiki/The_Last_Vegas' },
+      { label: 'Spotify', href: 'https://open.spotify.com/artist/7fXDfYeQzpPak5bAizQApC' },
       { label: 'Website' },
-      { label: 'Spotify' },
     ],
     photos: [
       { src: '/images/last-vegas.jpg', alt: 'The Last Vegas', span: 'wide' },
+      { src: '/images/last-vegas-arena.jpg', alt: 'The Last Vegas backstage at the arena' },
       { src: '/images/backstage-uk.jpg', alt: 'The Last Vegas backstage in the UK' },
-      { alt: 'The Last Vegas on tour' },
-      { alt: 'The Last Vegas live' },
+      { src: '/images/last-vegas-live-banner.jpg', alt: 'The Last Vegas performing live', span: 'wide' },
+      { src: '/images/last-vegas-live-bw.jpg', alt: 'The Last Vegas on stage' },
+      { src: '/images/last-vegas-acdc-sign.jpg', alt: 'Dressing room sign: AC/DC and The Last Vegas' },
     ],
   },
   {
