@@ -13,6 +13,8 @@ const isHome = bare === '/';
 const homeHref = isDE ? '/de/' : '/';
 // Section links are fragments on the homepage, absolute links from anywhere else.
 const section = (id: string) => (isHome ? `#${id}` : `${homeHref}#${id}`);
+// Press is its own route rather than a homepage section.
+const pressHref = isDE ? '/de/press' : '/press';
 // Keep the reader on the same page when switching language.
 const enHref = bare;
 const deHref = isHome ? '/de/' : `/de${bare}`;
@@ -25,6 +27,7 @@ const deHref = isHome ? '/de/' : `/de${bare}`;
     <a href={section('shows')}>{t('nav.shows')}</a>
     <a href={section('about')}>{t('nav.about')}</a>
     <a href={section('gallery')}>{t('nav.gallery')}</a>
+    <a href={pressHref} class:list={[bare === '/press' && 'active']}>{t('nav.press')}</a>
     <a href={section('contact')}>{t('nav.contact')}</a>
   </div>
 
@@ -71,6 +74,11 @@ const deHref = isHome ? '/de/' : `/de${bare}`;
 
   .links a:hover {
     color: var(--text);
+  }
+
+  .links a.active {
+    color: var(--text);
+    font-weight: 700;
   }
 
   .lang-switcher {

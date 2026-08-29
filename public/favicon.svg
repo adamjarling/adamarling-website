@@ -1,4 +1,6 @@
+<!-- "A" in Bebas Neue (the homepage display face), converted to a path so it
+     renders without needing the webfont — SVG favicons can't load external fonts. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#111"/>
-  <text x="4" y="24" font-family="serif" font-size="22" font-weight="bold" fill="#E76F51">A</text>
+  <rect width="32" height="32" fill="#F0EBE3"/>
+  <path transform="translate(9.1257 28) scale(0.034286 -0.034286)" fill="#111111" d="M126 700H275L389 0H279L259 139V137H134L114 0H12ZM246 232 197 578H195L147 232Z"/>
 </svg>

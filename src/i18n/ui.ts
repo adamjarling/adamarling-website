@@ -11,6 +11,7 @@ export const ui = {
       shows: 'Shows',
       about: 'About',
       gallery: 'Gallery',
+      press: 'Press',
       contact: 'Contact',
     },
     hero: {
@@ -79,6 +80,18 @@ export const ui = {
     gallery: {
       title: 'Gallery',
     },
+    press: {
+      title: 'Press',
+      blurb: 'Interviews, features, and clippings',
+      placeholder: 'Coming soon',
+      kind: {
+        interview: 'Interview',
+        feature: 'Feature',
+        review: 'Review',
+        radio: 'Radio',
+        video: 'Video',
+      },
+    },
     about: {
       quote:
         '"Playing guitar, writing songs, and chasing the raw sounds of the \'60s and \'70s across Europe."',
@@ -106,6 +119,7 @@ export const ui = {
       shows: 'Shows',
       about: 'Über mich',
       gallery: 'Galerie',
+      press: 'Presse',
       contact: 'Kontakt',
     },
     hero: {
@@ -173,6 +187,18 @@ export const ui = {
     },
     gallery: {
       title: 'Galerie',
+    },
+    press: {
+      title: 'Presse',
+      blurb: 'Interviews, Features und Artikel',
+      placeholder: 'Folgt in Kürze',
+      kind: {
+        interview: 'Interview',
+        feature: 'Feature',
+        review: 'Rezension',
+        radio: 'Radio',
+        video: 'Video',
+      },
     },
     about: {
       quote:

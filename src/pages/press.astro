@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Press from '../components/Press.astro';
+import Footer from '../components/Footer.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+---
+<Layout
+  title={`${t('press.title')} — Adam Arling`}
+  description={t('press.blurb')}
+  lang="en"
+>
+  <Nav />
+  <Press lang="en" />
+  <Footer />
+</Layout>
