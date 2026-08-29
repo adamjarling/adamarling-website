@@ -33,8 +33,35 @@ const t = useTranslations(lang);
     </div>
   </article>
 
-  <!-- 3-card grid -->
+  <!-- Rest of the bands -->
   <div class="grid">
+    <article class="cell" id="the-midnight-calls">
+      <h3 class="cell-name">
+        <a href={bandHref('the-midnight-calls', lang)}>THE MIDNIGHT CALLS</a>
+      </h3>
+      <div class="cell-photo">
+        <img src="/images/midnight-calls-crowd-selfie.jpg" alt="The Midnight Calls with the crowd after a show" loading="lazy" />
+      </div>
+      <div class="cell-era">{t('midnight.genre')}</div>
+      <p class="cell-desc">{t('midnight.description')}</p>
+      <a href={bandHref('the-midnight-calls', lang)} class="cell-link">{t('band.view')} →</a>
+    </article>
+
+    <article class="cell" id="deloreans">
+      <h3 class="cell-name">
+        <a href={bandHref('deloreans', lang)}>DELOREANS</a>
+      </h3>
+      <div class="cell-photo">
+        <img src="/images/deloreans-zoltan-adam-bar.jpg" alt="Zoltan and Adam at the bar, Café Carina" loading="lazy" />
+      </div>
+      <div class="cell-era">{t('deloreans.genre')}</div>
+      <p class="cell-desc">{t('deloreans.description')}</p>
+      <div class="cell-links">
+        <a href="https://deloreans.at" target="_blank" rel="noopener noreferrer" class="cell-link">{t('deloreans.website')}</a>
+        <a href={bandHref('deloreans', lang)} class="cell-link">{t('band.view')} →</a>
+      </div>
+    </article>
+
     <article class="cell" id="urge-overkill">
       <h3 class="cell-name">
         <a href={bandHref('urge-overkill', lang)}>URGE OVERKILL</a>
@@ -71,6 +98,8 @@ const t = useTranslations(lang);
     grid-template-columns: 1fr 1.2fr;
     gap: 56px;
     padding: 72px 64px 72px 80px;
+    background: var(--text);
+    color: var(--bg);
     border-bottom: 4px solid var(--text);
     overflow: hidden;
   }
@@ -99,12 +128,13 @@ const t = useTranslations(lang);
     line-height: 0.92;
     letter-spacing: 0.02em;
     margin: 0 0 18px 0;
+    color: var(--bg);
   }
 
   .era {
     font-family: var(--font-mono);
     font-size: 12px;
-    color: var(--accent);
+    color: var(--neon);
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -112,7 +142,7 @@ const t = useTranslations(lang);
   }
 
   .desc {
-    color: var(--muted);
+    color: #999;
     line-height: 1.75;
     font-size: 15px;
     max-width: 520px;
@@ -126,8 +156,8 @@ const t = useTranslations(lang);
   }
 
   .tag {
-    background: var(--text);
-    color: var(--bg);
+    background: var(--bg);
+    color: var(--text);
     padding: 6px 12px;
     font-family: var(--font-mono);
     font-size: 10px;
@@ -168,10 +198,15 @@ const t = useTranslations(lang);
   .cell {
     padding: 48px;
     border-right: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
   }
 
-  .cell:last-child {
+  .cell:nth-child(2n) {
     border-right: none;
+  }
+
+  .cell:nth-child(n + 3) {
+    border-bottom: none;
   }
 
   .cell-name {
@@ -241,6 +276,12 @@ const t = useTranslations(lang);
     color: var(--accent);
   }
 
+  .cell-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
   .cell-link {
     display: inline-block;
     margin-top: 16px;
@@ -253,6 +294,15 @@ const t = useTranslations(lang);
 
   .cell-link:hover {
     border-color: var(--text);
+  }
+
+  .featured .cell-link {
+    color: var(--bg);
+    border-bottom-color: var(--neon);
+  }
+
+  .featured .cell-link:hover {
+    border-color: var(--bg);
   }
 
   @media (max-width: 900px) {
@@ -270,6 +320,10 @@ const t = useTranslations(lang);
       border-right: none;
       border-bottom: 2px solid var(--text);
       padding: 32px;
+    }
+
+    .cell:nth-child(n + 3) {
+      border-bottom: 2px solid var(--text);
     }
 
     .cell:last-child {

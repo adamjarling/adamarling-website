@@ -6,10 +6,14 @@ const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
 const t = useTranslations(lang);
 
 const shows = [
-  { date: '14 JUN', band: 'The Drags', slug: 'the-drags', venue: 'Chelsea, Vienna' },
-  { date: '28 JUN', band: 'DeLoreans', slug: 'deloreans', venue: 'Café Carina, Vienna' },
-  { date: '12 JUL', band: 'The Drags', slug: 'the-drags', venue: 'Arena Wien, Vienna' },
-  { date: '02 AUG', band: 'The Drags', slug: 'the-drags', venue: 'B72, Vienna' },
+  { date: '07 AUG', band: 'Warrior Soul', slug: 'warrior-soul', venue: 'Alcatraz Open Air Festival, Kortrijk' },
+  { date: '09 AUG', band: 'Warrior Soul', slug: 'warrior-soul', venue: 'Alcatraz Open Air Festival, Kortrijk' },
+  { date: '14 AUG', band: 'DeLoreans', slug: 'deloreans', venue: 'Szepezdfürdői Strand, Balatonszepezd' },
+  { date: '15 AUG', band: 'DeLoreans', slug: 'deloreans', venue: 'Pálffy Winery, Köveskál' },
+  { date: '29 AUG', band: "Joe Leupold's Soul Session", venue: 'Quattro Music Club, Vienna' },
+  { date: '19 SEP', band: 'DeLoreans', slug: 'deloreans', venue: 'Quattro Music Club, Vienna' },
+  { date: '30 OCT', band: 'The Midnight Calls', slug: 'the-midnight-calls', venue: 'Reggies Shack, Chicago — w/ The Handcuffs, Cle Elum' },
+  { date: '27 NOV', band: 'The Drags', slug: 'the-drags', venue: 'Café Carina, Vienna' },
 ];
 ---
 <section class="shows" id="shows">
@@ -20,16 +24,26 @@ const shows = [
       {
         shows.map((show, i) => (
           <div class:list={['row', i === 0 && 'row-first']}>
-            <a class="row-main" href={bandHref(show.slug, lang)}>
-              <span class="date">{show.date}</span>
-              <div class="band-venue">
-                <span class="band">
-                  {show.band}
-                  <span class="arrow" aria-hidden="true">→</span>
-                </span>
-                <span class="venue">{show.venue}</span>
+            {show.slug ? (
+              <a class="row-main" href={bandHref(show.slug, lang)}>
+                <span class="date">{show.date}</span>
+                <div class="band-venue">
+                  <span class="band">
+                    {show.band}
+                    <span class="arrow" aria-hidden="true">→</span>
+                  </span>
+                  <span class="venue">{show.venue}</span>
+                </div>
+              </a>
+            ) : (
+              <div class="row-main row-main-plain">
+                <span class="date">{show.date}</span>
+                <div class="band-venue">
+                  <span class="band">{show.band}</span>
+                  <span class="venue">{show.venue}</span>
+                </div>
               </div>
-            </a>
+            )}
             <button class="ticket">{t('shows.tickets')}</button>
           </div>
         ))

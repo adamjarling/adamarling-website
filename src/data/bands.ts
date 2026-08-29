@@ -57,9 +57,12 @@ export const bands: Band[] = [
       { label: 'Instagram' },
     ],
     photos: [
-      { src: '/images/drags-live-band.jpg', alt: 'The Drags performing live', span: 'wide' },
       { src: '/images/drags-live-singer.jpg', alt: 'The Drags vocalist on stage' },
       { src: '/images/drags-live-guitarist.jpg', alt: 'The Drags guitarist on stage' },
+      { src: '/images/drags-live-carina.jpg', alt: 'The Drags performing live at Café Carina, Vienna', span: 'wide' },
+      { src: '/images/drags-backstage-setlist.jpg', alt: 'The Drags backstage with the night’s setlist' },
+      { src: '/images/drags-carina-flyer-art.jpg', alt: 'Hand-painted gig poster art for The Drags at Café Carina, Vienna', caption: 'Poster art in progress' },
+      { src: '/images/drags-carina-promo-graphic.jpg', alt: 'Instagram promo graphic for The Drags at Café Carina, Vienna', caption: 'Show promo graphic' },
     ],
   },
   {
@@ -75,7 +78,11 @@ export const bands: Band[] = [
     ],
     photos: [
       { src: '/images/deloreans-graffiti.jpg', alt: 'DeLoreans', span: 'wide' },
-      { alt: 'DeLoreans live' },
+      { src: '/images/deloreans-live-stage.jpg', alt: 'DeLoreans performing live', span: 'wide' },
+      { src: '/images/deloreans-lake-portrait.jpg', alt: 'DeLoreans members by the lake at sunset' },
+      { src: '/images/deloreans-acoustic-solo.jpg', alt: 'DeLoreans acoustic performance' },
+      { src: '/images/deloreans-carina-acoustic.jpg', alt: 'DeLoreans acoustic set at Café Carina, Vienna' },
+      { src: '/images/deloreans-zoltan-adam-bar.jpg', alt: 'Zoltan and Adam at the bar, Café Carina' },
     ],
   },
   {
@@ -94,6 +101,10 @@ export const bands: Band[] = [
       { src: '/images/midnight-calls-live-vocals.jpg', alt: 'Adam Arling on vocals with The Midnight Calls' },
       { src: '/images/midnight-calls-crowd-view.jpg', alt: 'The Midnight Calls playing to the crowd in Madrid' },
       { src: '/images/midnight-calls-crowd.jpg', alt: 'The Midnight Calls with fans at Café Central, Madrid' },
+      { src: '/images/midnight-calls-live-leanback.jpg', alt: 'The Midnight Calls guitarist on stage in Spain' },
+      { src: '/images/midnight-calls-band-2026.jpg', alt: 'The Midnight Calls band portrait, 2026', span: 'wide' },
+      { src: '/images/midnight-calls-crowd-selfie.jpg', alt: 'The Midnight Calls with the crowd after a show', span: 'wide' },
+      { src: '/images/midnight-calls-poster-art.jpg', alt: 'AI-generated poster art for The Midnight Calls', caption: 'AI-generated poster art' },
     ],
   },
   {
@@ -114,6 +125,10 @@ export const bands: Band[] = [
       { src: '/images/warrior-soul-headbang.jpg', alt: 'Adam Arling on stage with Warrior Soul' },
       { src: '/images/warrior-soul-live.jpg', alt: 'Warrior Soul live' },
       { src: '/images/warrior-soul-festival.jpg', alt: 'Warrior Soul with the festival crowd', span: 'wide' },
+      { src: '/images/warrior-soul-marshall.jpg', alt: 'Adam Arling on guitar with Warrior Soul in front of a Marshall stack' },
+      { src: '/images/warrior-soul-red.jpg', alt: 'Warrior Soul live under red stage lights' },
+      { src: '/images/warrior-soul-live-collision.jpg', alt: 'Warrior Soul vocalist and guitarist on stage together', span: 'wide' },
+      { src: '/images/warrior-soul-spain-2025.jpg', alt: 'Warrior Soul backstage in Spain, 2025' },
     ],
   },
   {
@@ -134,6 +149,9 @@ export const bands: Band[] = [
       { src: '/images/last-vegas-live-banner.jpg', alt: 'The Last Vegas performing live', span: 'wide' },
       { src: '/images/last-vegas-live-bw.jpg', alt: 'The Last Vegas on stage' },
       { src: '/images/last-vegas-acdc-sign.jpg', alt: 'Dressing room sign: AC/DC and The Last Vegas' },
+      { src: '/images/last-vegas-promo-hills-2016.jpg', alt: 'The Last Vegas promotional photo in the Hollywood Hills, 2016', span: 'wide' },
+      { src: '/images/last-vegas-backstage-toast.jpg', alt: 'The Last Vegas backstage with drinks raised' },
+      { src: '/images/last-vegas-live-early.jpg', alt: 'The Last Vegas performing live' },
     ],
   },
   {
@@ -149,7 +167,7 @@ export const bands: Band[] = [
     ],
     photos: [
       { src: '/images/urge-overkill.jpg', alt: 'Urge Overkill', span: 'wide' },
-      { alt: 'Urge Overkill live' },
+      { src: '/images/urge-overkill-bigscreen.jpg', alt: 'Adam Arling performing with Urge Overkill, shown on the venue jumbotron' },
       { alt: 'Urge Overkill backstage' },
     ],
   },
