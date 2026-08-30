@@ -78,7 +78,9 @@ const t = useTranslations(lang);
       <h3 class="cell-name">
         <a href={bandHref('the-cynics', lang)}>THE CYNICS</a>
       </h3>
-      <div class="placeholder">[ The Cynics Photo ]</div>
+      <div class="cell-photo">
+        <img src="/images/cynics-live-crowd.jpg" alt="The Cynics performing live, with fans reaching toward the stage" loading="lazy" />
+      </div>
       <div class="cell-era">{t('legacy.cynics.era')}</div>
       <p class="cell-desc">{t('legacy.cynics.description')}</p>
       <a href={bandHref('the-cynics', lang)} class="cell-link">{t('band.view')} →</a>
