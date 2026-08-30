@@ -17,3 +17,7 @@ dist/
 .vscode/*
 !.vscode/extensions.json
 node_modules
+
+# local-only source material (kept on disk, not in git)
+/photos/
+*.zip
