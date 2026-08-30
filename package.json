@@ -11,5 +11,8 @@
   "dependencies": {
     "astro": "^7.2.8"
   },
-  "packageManager": "pnpm@11.21.0"
+  "packageManager": "pnpm@11.21.0",
+  "devDependencies": {
+    "@astrojs/sitemap": "^3.7.3"
+  }
 }

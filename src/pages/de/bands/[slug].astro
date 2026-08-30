@@ -3,7 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import Nav from '../../../components/Nav.astro';
 import BandPage from '../../../components/BandPage.astro';
 import Footer from '../../../components/Footer.astro';
-import { bands } from '../../../data/bands';
+import { bands, bandHref } from '../../../data/bands';
 import { useTranslations } from '../../../i18n/utils';
 
 export function getStaticPaths() {
@@ -12,11 +12,29 @@ export function getStaticPaths() {
 
 const { band } = Astro.props;
 const t = useTranslations('de');
+
+const bandPhoto = band.photos.find((p) => p.src)?.src;
+const musicGroupSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MusicGroup',
+  name: band.name,
+  genre: t(band.metaKey),
+  description: t(band.blurbKey),
+  url: new URL(bandHref(band.slug, 'de'), Astro.site).href,
+  ...(bandPhoto && { image: new URL(bandPhoto, Astro.site).href }),
+  sameAs: band.links.filter((l) => l.href).map((l) => l.href),
+  member: {
+    '@type': 'Person',
+    name: 'Adam Arling',
+    url: new URL('/', Astro.site).href,
+  },
+};
 ---
 <Layout
   title={`${band.name} — Adam Arling`}
   description={t(band.blurbKey)}
   lang="de"
+  structuredData={[musicGroupSchema]}
 >
   <Nav />
   <BandPage band={band} lang="de" />
