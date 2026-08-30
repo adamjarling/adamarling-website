@@ -152,6 +152,12 @@ const t = useTranslations(lang);
     display: block;
   }
 
+  @media (min-width: 901px) {
+    .photo-pair div:first-child img {
+      object-position: top;
+    }
+  }
+
   @media (max-width: 900px) {
     .drags {
       padding: 48px 32px 48px 40px;
