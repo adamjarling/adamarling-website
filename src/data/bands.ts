@@ -184,9 +184,9 @@ export const bands: Band[] = [
       { label: 'Bandcamp' },
     ],
     photos: [
-      { alt: 'The Cynics live', span: 'wide' },
-      { alt: 'The Cynics on tour' },
-      { alt: 'The Cynics backstage' },
+      { src: '/images/cynics-live-crowd.jpg', alt: 'The Cynics performing live, with fans reaching toward the stage', span: 'wide' },
+      { src: '/images/cynics-poster-spain-tour.jpg', alt: 'Gig poster for The Cynics 2006 Spain tour dates', caption: '2006 Spain tour poster' },
+      { src: '/images/cynics-poster-madrid.jpg', alt: 'Gig poster for The Cynics in Madrid', caption: 'Madrid show poster' },
     ],
   },
 ];
