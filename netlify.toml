@@ -1,0 +1,38 @@
+# Netlify build configuration
+#
+# Node version is pinned in .node-version
+# pnpm version is pinned via the "packageManager" field in package.json
+# (Netlify reads it through Corepack; PNPM_VERSION is NOT a supported variable)
+
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+# --- Legacy routes from the previous Next.js site -------------------------
+# The old adamarling.com served /bands and /photos as standalone pages.
+# The Astro site folds both into sections of the homepage.
+
+[[redirects]]
+  from = "/bands"
+  to = "/#music"
+  status = 301
+
+[[redirects]]
+  from = "/photos"
+  to = "/#gallery"
+  status = 301
+
+[[redirects]]
+  from = "/cv"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/work"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/writing"
+  to = "/"
+  status = 301
