@@ -49,20 +49,24 @@ export const bands: Band[] = [
     name: 'THE DRAGS',
     metaKey: 'drags.genre',
     blurbKey: 'drags.description',
-    note: { en: '' },
+    note: {
+      en: "A new project with some friends I met in Vienna. Sounds something like The Velvet Underground — mellow, moody, soulful vocals. Writing material now, which could be some of the coolest stuff I've been part of in a long time. Aiming to release some tracks at the end of 2026.",
+    },
     links: [
       { label: 'Website', href: 'https://thedragsband.com' },
-      { label: 'Bandcamp', href: 'https://thedragsband.bandcamp.com' },
       { label: 'Spotify' },
-      { label: 'Instagram' },
+      { label: 'Instagram', href: 'https://www.instagram.com/wearethedrags' },
     ],
     photos: [
-      { src: '/images/drags-live-singer.jpg', alt: 'The Drags vocalist on stage' },
+      { src: '/images/drags-backstage-setlist.jpg', alt: 'The Drags backstage with the night’s setlist' },
+      { src: '/images/drags-lill-onstage.png', alt: 'The Drags vocalist on stage' },
+      { src: '/images/drags-mobile-hero-bg6.jpeg', alt: 'The Drags' },
       { src: '/images/drags-live-guitarist.jpg', alt: 'The Drags guitarist on stage' },
       { src: '/images/drags-live-carina.jpg', alt: 'The Drags performing live at Café Carina, Vienna', span: 'wide' },
-      { src: '/images/drags-backstage-setlist.jpg', alt: 'The Drags backstage with the night’s setlist' },
       { src: '/images/drags-carina-flyer-art.jpg', alt: 'Hand-painted gig poster art for The Drags at Café Carina, Vienna', caption: 'Poster art in progress' },
       { src: '/images/drags-carina-promo-graphic.jpg', alt: 'Instagram promo graphic for The Drags at Café Carina, Vienna', caption: 'Show promo graphic' },
+      { src: '/images/drags-mobile-hero-bg4.png', alt: 'The Drags' },
+      { src: '/images/drags-helmut-square.png', alt: 'The Drags' },
     ],
   },
   {
@@ -70,10 +74,12 @@ export const bands: Band[] = [
     name: 'DELOREANS',
     metaKey: 'deloreans.genre',
     blurbKey: 'deloreans.description',
-    note: { en: '' },
+    note: {
+      en: 'I met BZ at Vienna\'s coolest session, DonnerJam, and this dude just roared vocally and could play the hell out of the drums. A total performer, we started this project to fill a date at Café Carina, and now the "joke" has extended into playing clubs, pubs, wineries and more across Austria and Hungary, with lots of regional dates coming up. A guilty pleasure, but fun to jam with my man BZ!',
+    },
     links: [
       { label: 'Website', href: 'https://deloreans.at' },
-      { label: 'Spotify' },
+      { label: 'Facebook', href: 'https://www.facebook.com/deloreansrock' },
       { label: 'Instagram' },
     ],
     photos: [
@@ -90,11 +96,14 @@ export const bands: Band[] = [
     name: 'THE MIDNIGHT CALLS',
     metaKey: 'midnight.genre',
     blurbKey: 'midnight.description',
-    note: { en: '' },
+    note: {
+      en: "The blues rock project I was in before moving to Vienna. My Chicago buddies, phenomenal musicians, and Taran De Pablo's killer songwriting. This band is so good and pro. They actively still jam regularly in Chicago and I join in sporadically, and then we've been doing one Europe tour a year. Chicago rocks.",
+    },
     links: [
-      { label: 'Website' },
-      { label: 'Spotify' },
-      { label: 'Bandcamp' },
+      { label: 'Website', href: 'https://themidnightcalls.com/' },
+      { label: 'Facebook', href: 'https://www.facebook.com/themidnightcallsofficial' },
+      { label: 'Spotify', href: 'https://open.spotify.com/artist/6rcObgTuaf4s9uaOEK68D9' },
+      { label: 'Bandcamp', href: 'https://themidnightcalls.bandcamp.com/' },
     ],
     photos: [
       { src: '/images/midnight-calls-banner.jpg', alt: 'The Midnight Calls performing live', span: 'wide' },
@@ -112,11 +121,13 @@ export const bands: Band[] = [
     name: 'WARRIOR SOUL',
     metaKey: 'warriorSoul.genre',
     blurbKey: 'warriorSoul.description',
-    note: { en: '' },
+    note: {
+      en: "I've known Kory Clarke for probably 12-13 years now, and he's one of the best rock front persons ever — his power, delivery and command of the stage to this day leaves others in the dust. He's a force of nature, and the guys in the current line-up are so cool and some of my best touring buddies now. Everyone's from a different country in Europe, so when Kory invites me to play it's always a raging good time.",
+    },
     links: [
       { label: 'Wikipedia', href: 'https://en.wikipedia.org/wiki/Warrior_Soul' },
       { label: 'Website' },
-      { label: 'Spotify' },
+      { label: 'Facebook', href: 'https://www.facebook.com/warriorsoulofficial' },
     ],
     photos: [
       { src: '/images/warrior-soul-singer-guitar.jpg', alt: 'Warrior Soul performing live', span: 'wide' },
@@ -136,11 +147,14 @@ export const bands: Band[] = [
     name: 'THE LAST VEGAS',
     metaKey: 'legacy.lastVegas.era',
     blurbKey: 'legacy.lastVegas.description',
-    note: { en: '' },
+    note: {
+      en: 'My main band which defined most of my rock career. Started in college with my brother and some friends, it evolved into an underground punk/glam/garage touring machine which went and played everywhere. Eventually doing a record with Nikki Sixx and touring with Mötley Crüe, we lived in a van across North America and Europe for about 12 hard fought years. Unforgettable memories, brothers, and shaped everything about how I look at life as an old dude now :)',
+    },
     links: [
       { label: 'Wikipedia', href: 'https://en.wikipedia.org/wiki/The_Last_Vegas' },
+      { label: 'Website', href: 'https://www.thelastvegas.com/' },
+      { label: 'Facebook', href: 'https://www.facebook.com/thelastvegas/' },
       { label: 'Spotify', href: 'https://open.spotify.com/artist/7fXDfYeQzpPak5bAizQApC' },
-      { label: 'Website' },
     ],
     photos: [
       { src: '/images/last-vegas.jpg', alt: 'The Last Vegas', span: 'wide' },
@@ -159,11 +173,14 @@ export const bands: Band[] = [
     name: 'URGE OVERKILL',
     metaKey: 'legacy.urgeOverkill.era',
     blurbKey: 'legacy.urgeOverkill.description',
-    note: { en: '' },
+    note: {
+      en: "I grew up listening to UO as a teenager, and fast forward into Chicago with The Last Vegas, they picked up my brother on drums and put TLV on tour with them. A few years later Ed asked me to play bass, and it was just like... you couldn't make this stuff up. True rockstars, I had the honor of jamming with UO from 2014 starting in Australia, all the way up to their last live performance in ~2020 or so. Chicago legends.",
+    },
     links: [
       { label: 'Wikipedia', href: 'https://en.wikipedia.org/wiki/Urge_Overkill' },
       { label: 'Website', href: 'https://urgeoverkill.com' },
-      { label: 'Spotify' },
+      { label: 'Instagram', href: 'https://www.instagram.com/urgeoverkill/' },
+      { label: 'Spotify', href: 'https://open.spotify.com/artist/5LEUigTSXpwrtERRcSW1N4' },
     ],
     photos: [
       { src: '/images/urge-overkill.jpg', alt: 'Urge Overkill', span: 'wide' },
@@ -176,10 +193,12 @@ export const bands: Band[] = [
     name: 'THE CYNICS',
     metaKey: 'legacy.cynics.era',
     blurbKey: 'legacy.cynics.description',
-    note: { en: '' },
+    note: {
+      en: "The Cynics came into my life when garage rock did, when living in Normal, IL. Somehow I went from hard rock, to blues, then found 60s style garage rock via the coolest record store ever, Mother Murphy's. I had all the Cynics albums, and The Last Vegas hopped on a bill with them in Champaign, IL. They asked my brother Nathan to play drums with them soon after, and then asked me to fill in on bass for a few years after that. Same playbook as UO, ha, but Cynics were first! Michael and Gregg are true legends, coolest guys ever. The Last Vegas put out our first two albums on Get Hip Records (run by Gregg). They were our rock'n'roll parents for a while, between 2004 and 2008.",
+    },
     links: [
       { label: 'Wikipedia', href: 'https://en.wikipedia.org/wiki/The_Cynics' },
-      { label: 'Website' },
+      { label: 'Website', href: 'https://thecynics.net/' },
       { label: 'Spotify' },
       { label: 'Bandcamp' },
     ],

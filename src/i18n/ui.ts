@@ -35,13 +35,13 @@ export const ui = {
     midnight: {
       genre: 'Classic Rock & Roll ✦ Chicago',
       description:
-        'New album DOS mixed by Mike Hagler at Kingsize Sound Labs. Shared stages with Living Colour, LA Guns, Jackyl, Pat Travers, and more.',
+        '"They are one of those bands that, after seeing and hearing them, makes you think in that moment they are the best in the world." — Popular 1 (Spain), 8/10',
       listen: 'Listen',
     },
     warriorSoul: {
       genre: 'Alternative Rock / Metal ✦ New York',
       description:
-        'Acclaimed New York hard rock band, active since 1988. Adam tours and records with them occasionally.',
+        'Legendary New York hard rock band signed to Geffen Records within nine months of forming. Toured with Queensrÿche, headlined the Kerrang! UK tour, and played Dynamo Open Air and Donington Monsters of Rock — 13+ albums and counting since 1987.',
       listen: 'Listen',
     },
     legacy: {
@@ -49,17 +49,17 @@ export const ui = {
       lastVegas: {
         era: 'Chicago · 2003–2025 · Hard Rock',
         description:
-          'Hard rock band from Chicago. Toured worldwide with legendary acts. Adam played guitar across studio albums and major tours throughout the band\'s active years.',
+          'Chicago powerhouse blending classic rock swagger with modern anthemic hooks. Toured the world supporting AC/DC, Mötley Crüe, and Guns N\' Roses, with seven studio albums — Seal the Deal, Whatever Gets You Off, and Bad Decisions among them — cementing their place among the genre\'s most electrifying live acts.',
       },
       urgeOverkill: {
         era: 'Chicago · Alternative Rock',
         description:
-          'Alternative rock band from Chicago, best known for the Pulp Fiction soundtrack hit "Girl, You\'ll Be a Woman Soon" (1994). Adam performed live with the band.',
+          'Chicago alt-rock legends signed to Geffen Records, who opened for Nirvana on the Nevermind tour and Pearl Jam on the Vs. tour. Their cover of "Girl, You\'ll Be a Woman Soon" hit #59 on the Billboard Hot 100 after landing in Pulp Fiction (1994). Adam performed live with the band.',
       },
       cynics: {
         era: 'Pittsburgh · Garage Rock · Since 1983',
         description:
-          'Legendary garage rock institution from Pittsburgh. Adam toured and recorded with the band during the late 2000s.',
+          'Legendary garage rock institution from Pittsburgh, active since 1983 and founders of the influential independent label Get Hip Records. USA Today hailed their album Here We Are as "one of the best neo-garage-rock albums in years." Adam toured and recorded with the band during the late 2000s.',
       },
     },
     shows: {
@@ -143,13 +143,13 @@ export const ui = {
     midnight: {
       genre: 'Classic Rock & Roll ✦ Chicago',
       description:
-        'Neues Album DOS, gemischt von Mike Hagler bei Kingsize Sound Labs. Gemeinsame Auftritte mit Living Colour, LA Guns, Jackyl, Pat Travers und mehr.',
+        '"Sie sind eine dieser Bands, bei denen man nach dem Sehen und Hören in diesem Moment denkt, sie seien die beste der Welt." — Popular 1 (Spanien), 8/10',
       listen: 'Anhören',
     },
     warriorSoul: {
       genre: 'Alternative Rock / Metal ✦ New York',
       description:
-        'Renommierte Hardrock-Band aus New York, seit 1988 aktiv. Adam geht gelegentlich mit ihnen auf Tour und nimmt mit ihnen auf.',
+        'Legendäre Hardrock-Band aus New York, die innerhalb von neun Monaten nach ihrer Gründung bei Geffen Records unterschrieb. Tourte mit Queensrÿche, headlinete die Kerrang!-UK-Tour und spielte beim Dynamo Open Air und Donington Monsters of Rock — über 13 Alben seit 1987.',
       listen: 'Anhören',
     },
     legacy: {
@@ -157,17 +157,17 @@ export const ui = {
       lastVegas: {
         era: 'Chicago · 2003–2025 · Hard Rock',
         description:
-          'Hardrock-Band aus Chicago. Weltweite Tourneen mit legendären Acts. Adam spielte Gitarre auf Studioalben und großen Tourneen während der aktiven Jahre der Band.',
+          'Rock-Kraftpaket aus Chicago, das klassischen Rock-Swagger mit modernen, anthemischen Hooks verbindet. Tourte weltweit als Support für AC/DC, Mötley Crüe und Guns N\' Roses, mit sieben Studioalben — darunter Seal the Deal, Whatever Gets You Off und Bad Decisions —, die ihren Platz unter den mitreißendsten Live-Acts des Genres festigten.',
       },
       urgeOverkill: {
         era: 'Chicago · Alternative Rock',
         description:
-          'Alternative-Rock-Band aus Chicago, bekannt für den Pulp-Fiction-Soundtrack-Hit „Girl, You\'ll Be a Woman Soon" (1994). Adam trat live mit der Band auf.',
+          'Alt-Rock-Legenden aus Chicago, unter Vertrag bei Geffen Records, die als Support für Nirvana auf der Nevermind-Tour und für Pearl Jam auf der Vs.-Tour tourten. Ihre Coverversion von „Girl, You\'ll Be a Woman Soon" erreichte Platz 59 der Billboard Hot 100, nachdem sie in Pulp Fiction (1994) zu hören war. Adam trat live mit der Band auf.',
       },
       cynics: {
         era: 'Pittsburgh · Garage Rock · Seit 1983',
         description:
-          'Legendäre Garage-Rock-Institution aus Pittsburgh. Adam tourte und nahm Ende der 2000er Jahre mit der Band auf.',
+          'Legendäre Garage-Rock-Institution aus Pittsburgh, seit 1983 aktiv und Gründer des einflussreichen Independent-Labels Get Hip Records. USA Today lobte ihr Album Here We Are als „eines der besten Neo-Garage-Rock-Alben seit Jahren". Adam tourte und nahm Ende der 2000er Jahre mit der Band auf.',
       },
     },
     shows: {
