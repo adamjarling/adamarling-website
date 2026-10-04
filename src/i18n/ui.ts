@@ -47,7 +47,7 @@ export const ui = {
     legacy: {
       featured: 'Featured',
       lastVegas: {
-        era: 'Chicago · 2003–2014 · Hard Rock',
+        era: 'Chicago · 2003–2025 · Hard Rock',
         description:
           'Hard rock band from Chicago. Toured worldwide with legendary acts. Adam played guitar across studio albums and major tours throughout the band\'s active years.',
       },
@@ -155,7 +155,7 @@ export const ui = {
     legacy: {
       featured: 'Hervorgehoben',
       lastVegas: {
-        era: 'Chicago · 2003–2014 · Hard Rock',
+        era: 'Chicago · 2003–2025 · Hard Rock',
         description:
           'Hardrock-Band aus Chicago. Weltweite Tourneen mit legendären Acts. Adam spielte Gitarre auf Studioalben und großen Tourneen während der aktiven Jahre der Band.',
       },
