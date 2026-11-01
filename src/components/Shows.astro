@@ -5,16 +5,23 @@ import { bandHref } from '../data/bands';
 const lang = (Astro.currentLocale ?? 'en') as 'en' | 'de';
 const t = useTranslations(lang);
 
-const shows = [
+// DeLoreans and The Drags rows come from the booking app's confirmed gigs.
+// `year` is only set when it differs from the current season, and shown small.
+const shows: { date: string; year?: string; band: string; slug?: string; venue: string }[] = [
   { date: '07 AUG', band: 'Warrior Soul', slug: 'warrior-soul', venue: 'Alcatraz Open Air Festival, Kortrijk' },
   { date: '09 AUG', band: 'Warrior Soul', slug: 'warrior-soul', venue: 'Alcatraz Open Air Festival, Kortrijk' },
-  { date: '14 AUG', band: 'DeLoreans', slug: 'deloreans', venue: 'Szepezdfürdői Strand, Balatonszepezd' },
-  { date: '15 AUG', band: 'DeLoreans', slug: 'deloreans', venue: 'Pálffy Winery, Köveskál' },
   { date: '29 AUG', band: "Joe Leupold's Soul Session", venue: 'Quattro Music Club, Vienna' },
-  { date: '19 SEP', band: 'DeLoreans', slug: 'deloreans', venue: 'Quattro Music Club, Vienna' },
-  { date: '10 OCT', band: 'DeLoreans', slug: 'deloreans', venue: "Tony's Buschenschank, Vienna" },
   { date: '30 OCT', band: 'The Midnight Calls', slug: 'the-midnight-calls', venue: 'Reggies Shack, Chicago — w/ The Handcuffs, Cle Elum' },
+  { date: '13 NOV', band: 'DeLoreans', slug: 'deloreans', venue: 'Rock X, Vienna' },
   { date: '27 NOV', band: 'The Drags', slug: 'the-drags', venue: 'Café Carina, Vienna' },
+  { date: '12 DEC', band: 'DeLoreans', slug: 'deloreans', venue: 'Rock & Leiwand X-Mas Markt, Vienna' },
+  { date: '13 DEC', band: 'DeLoreans', slug: 'deloreans', venue: 'Rock & Leiwand X-Mas Markt, Vienna' },
+  { date: '18 DEC', band: 'DeLoreans', slug: 'deloreans', venue: 'Rock & Leiwand X-Mas Markt, Vienna' },
+  { date: '19 DEC', band: 'DeLoreans', slug: 'deloreans', venue: 'Rock & Leiwand X-Mas Markt, Vienna' },
+  { date: '20 DEC', band: 'DeLoreans', slug: 'deloreans', venue: 'Rock & Leiwand X-Mas Markt, Vienna' },
+  { date: '31 DEC', band: "Joe Leupold's New Year's Eve Bash", venue: 'Quattro Music Club, Vienna' },
+  { date: '30 JAN', year: '2027', band: 'DeLoreans', slug: 'deloreans', venue: 'Rock X, Vienna' },
+  { date: '09 MAR', year: '2027', band: 'The Drags', slug: 'the-drags', venue: 'Club Lucia, Vienna — opening for Daisy Chain' },
 ];
 ---
 <section class="shows" id="shows">
@@ -27,7 +34,7 @@ const shows = [
           <div class:list={['row', i === 0 && 'row-first']}>
             {show.slug ? (
               <a class="row-main" href={bandHref(show.slug, lang)}>
-                <span class="date">{show.date}</span>
+                <span class="date">{show.date}{show.year && <span class="year">{show.year}</span>}</span>
                 <div class="band-venue">
                   <span class="band">
                     {show.band}
@@ -38,7 +45,7 @@ const shows = [
               </a>
             ) : (
               <div class="row-main row-main-plain">
-                <span class="date">{show.date}</span>
+                <span class="date">{show.date}{show.year && <span class="year">{show.year}</span>}</span>
                 <div class="band-venue">
                   <span class="band">{show.band}</span>
                   <span class="venue">{show.venue}</span>
@@ -116,6 +123,13 @@ const shows = [
     font-size: clamp(32px, 3.5vw, 44px);
     line-height: 1;
     color: var(--accent);
+  }
+
+  .year {
+    margin-left: 8px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
   }
 
   .band-venue {

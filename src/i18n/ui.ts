@@ -93,8 +93,6 @@ export const ui = {
       },
     },
     about: {
-      quote:
-        '"Playing guitar, writing songs, and chasing the raw sounds of the \'60s and \'70s across Europe."',
       bio: "Chicago-born, Vienna-based. Credits include The Last Vegas, Urge Overkill, The Cynics, and Warrior Soul. Shared stages with AC/DC, Guns N' Roses, Mötley Crüe, and ZZ Top across America and Europe.",
       press: 'Press Kit',
       contact: 'Contact',
@@ -201,8 +199,6 @@ export const ui = {
       },
     },
     about: {
-      quote:
-        '"Gitarre spielen, Songs schreiben und den rohen Klängen der 60er und 70er Jahre durch Europa nachjagen."',
       bio: "In Chicago geboren, in Wien zu Hause. Mitgewirkt bei The Last Vegas, Urge Overkill, The Cynics und Warrior Soul. Gemeinsame Auftritte mit AC/DC, Guns N' Roses, Mötley Crüe und ZZ Top in Amerika und Europa.",
       press: 'Pressemappe',
       contact: 'Kontakt',
