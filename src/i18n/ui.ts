@@ -61,6 +61,11 @@ export const ui = {
         description:
           'Legendary garage rock institution from Pittsburgh, active since 1983 and founders of the influential independent label Get Hip Records. USA Today hailed their album Here We Are as "one of the best neo-garage-rock albums in years." Adam toured and recorded with the band during the late 2000s.',
       },
+      rtz: {
+        era: 'Illinois · Rock · Summer 2024',
+        description:
+          'Played bass in the backing band for Robin Taylor Zander in summer 2024, alongside Frank Ferrer (Guns N\' Roses) on drums and Adam Krier (Lucky Boys Confusion) on keys. Two shows in Illinois, including opening for Pat Benatar in Orland Park and a night on the On the Dock Stage in Rockford with members of Cheap Trick in attendance.',
+      },
     },
     shows: {
       title: 'Upcoming Shows',
@@ -166,6 +171,11 @@ export const ui = {
         era: 'Pittsburgh · Garage Rock · Seit 1983',
         description:
           'Legendäre Garage-Rock-Institution aus Pittsburgh, seit 1983 aktiv und Gründer des einflussreichen Independent-Labels Get Hip Records. USA Today lobte ihr Album Here We Are als „eines der besten Neo-Garage-Rock-Alben seit Jahren". Adam tourte und nahm Ende der 2000er Jahre mit der Band auf.',
+      },
+      rtz: {
+        era: 'Illinois · Rock · Sommer 2024',
+        description:
+          'Spielte im Sommer 2024 Bass in der Begleitband von Robin Taylor Zander, zusammen mit Frank Ferrer (Guns N\' Roses) am Schlagzeug und Adam Krier (Lucky Boys Confusion) an den Keyboards. Zwei Shows in Illinois, darunter als Opener für Pat Benatar in Orland Park und ein Abend auf der On the Dock Stage in Rockford mit Mitgliedern von Cheap Trick im Publikum.',
       },
     },
     shows: {

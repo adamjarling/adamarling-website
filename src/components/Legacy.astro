@@ -85,6 +85,22 @@ const t = useTranslations(lang);
       <p class="cell-desc">{t('legacy.cynics.description')}</p>
       <a href={bandHref('the-cynics', lang)} class="cell-link">{t('band.view')} →</a>
     </article>
+
+    <article class="cell cell-wide" id="robin-taylor-zander">
+      <div class="cell-photo">
+        <a href={bandHref('robin-taylor-zander', lang)} tabindex="-1" aria-hidden="true">
+          <img src="/images/rtz-band-sunglasses.jpg" alt="Robin Taylor Zander and band in sunglasses, posing together backstage" loading="lazy" />
+        </a>
+      </div>
+      <div class="cell-text">
+        <h3 class="cell-name">
+          <a href={bandHref('robin-taylor-zander', lang)}>ROBIN TAYLOR ZANDER</a>
+        </h3>
+        <div class="cell-era">{t('legacy.rtz.era')}</div>
+        <p class="cell-desc">{t('legacy.rtz.description')}</p>
+        <a href={bandHref('robin-taylor-zander', lang)} class="cell-link">{t('band.view')} →</a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -207,8 +223,29 @@ const t = useTranslations(lang);
     border-right: none;
   }
 
-  .cell:nth-child(n + 3) {
+  .cell:nth-child(n + 5) {
     border-bottom: none;
+  }
+
+  /* Full-width card: photo beside text */
+  .cell-wide {
+    grid-column: 1 / -1;
+    border-right: none;
+    display: grid;
+    grid-template-columns: minmax(0, 440px) 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .cell-wide .cell-photo {
+    margin-bottom: 0;
+  }
+
+  /* Portrait frame, trimmed ~100px off the top (at the 440px column width) */
+  .cell-wide .cell-photo img {
+    height: auto;
+    aspect-ratio: 44 / 45;
+    object-position: center bottom;
   }
 
   .cell-name {
@@ -326,6 +363,19 @@ const t = useTranslations(lang);
 
     .cell:nth-child(n + 3) {
       border-bottom: 2px solid var(--text);
+    }
+
+    .cell-wide {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .cell-wide .cell-photo {
+      margin-bottom: 16px;
+    }
+
+    .cell-wide .cell-photo img {
+      max-width: 440px;
     }
 
     .cell:last-child {

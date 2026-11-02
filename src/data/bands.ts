@@ -208,6 +208,20 @@ export const bands: Band[] = [
       { src: '/images/cynics-poster-madrid.jpg', alt: 'Gig poster for The Cynics in Madrid', caption: 'Madrid show poster' },
     ],
   },
+  {
+    slug: 'robin-taylor-zander',
+    name: 'ROBIN TAYLOR ZANDER',
+    metaKey: 'legacy.rtz.era',
+    blurbKey: 'legacy.rtz.description',
+    note: { en: '' },
+    links: [],
+    photos: [
+      { src: '/images/rtz-band-sunglasses.jpg', alt: 'Robin Taylor Zander and band, in sunglasses, posing together backstage' },
+      { src: '/images/rtz-live-crowd-behind.jpg', alt: 'Robin Taylor Zander’s band on a big outdoor stage, seen from behind in front of a packed lawn', span: 'wide' },
+      { src: '/images/rtz-live-wide-stage.jpg', alt: 'Robin Taylor Zander’s band on a large outdoor stage at dusk, seen from stage level', span: 'wide' },
+      { src: '/images/rtz-live-smoky-lawn.jpg', alt: 'Robin Taylor Zander’s band on stage at dusk, looking out over a huge crowd', span: 'wide' },
+    ],
+  },
 ];
 
 export function getBand(slug: string): Band | undefined {
